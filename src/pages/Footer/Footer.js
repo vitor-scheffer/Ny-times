@@ -1,6 +1,8 @@
+import Nav from '../Header/Nav'
+
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Nav />
   )
 }
 export default Footer
