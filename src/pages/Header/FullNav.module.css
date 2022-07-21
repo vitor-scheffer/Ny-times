@@ -1,0 +1,15 @@
+.headerNav {
+	margin-top: 6px;
+}
+
+.headerNav ul {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid black;
+	padding: 6px 50px;
+}
+.headerNav ul a {
+	color: black;
+	font-size: 12px;
+}
