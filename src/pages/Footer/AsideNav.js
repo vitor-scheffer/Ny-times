@@ -1,6 +1,8 @@
+import styles from './Footer.module.css'
+
 const AsideNav = () => {
   return (
-    <ul>
+    <ul className={styles.asideNav}>
       <li>
         <a href="#"><small>Mobile Applications</small></a>
         
