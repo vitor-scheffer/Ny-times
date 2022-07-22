@@ -40,17 +40,17 @@ const Header = () => {
 			<FullNav />
 			<div className={styles.liveSection}>
 				<p>LIVE</p>
-				<p>
+				<a href='#'>
 					Russia-Ukraine War <small>1min ago</small>
-				</p>
+				</a>
 
-				<p>
+				<a href='#'>
 					Coronavirus Pandemic <small>2min ago</small>
-				</p>
+				</a>
 
-				<p>
+				<a href='#'>
 					Jan. 6 Hearings <small>3min ago</small>
-				</p>
+				</a>
 			</div>
 		</header>
 	);

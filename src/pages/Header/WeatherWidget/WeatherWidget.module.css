@@ -1,0 +1,23 @@
+.weather {
+	display: flex;
+	align-items: center;
+}
+
+.weather img {
+	width: 40px;
+}
+
+.weather p {
+	font-size: 10px;
+	margin-right: 6px;
+}
+
+.weather p:first-of-type {
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.weather p:last-child {
+	color: #666;
+	margin-right: 0;
+}
