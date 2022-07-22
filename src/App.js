@@ -41,7 +41,7 @@ function App() {
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route exact path="/" element={<Home news={Api.results}/>}>
+      <Route exact path="/" element={<Home articles={articles}/>}>
       </Route>
       <Route path="/detalhenoticia" element={<DetalheNoticia />}></Route>
       <Route path="/ciencia" element={<Ciencia />}></Route>
