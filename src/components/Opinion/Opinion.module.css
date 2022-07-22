@@ -1,0 +1,17 @@
+.opinion {
+	padding: 4px 0;
+	border-bottom: 1px solid #dfdfdf;
+	margin-bottom: 10px;
+}
+
+.opinion p {
+	color: #666;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin-bottom: 4px;
+}
+
+.opinion h3 {
+	font-family: 'Times New Roman', Times, serif;
+}
