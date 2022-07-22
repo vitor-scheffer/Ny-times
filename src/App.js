@@ -15,8 +15,9 @@ import DetalheNoticia from './pages/DetalheNoticia/DetalheNoticia';
 function App() {
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';
+
 	const [Api, setApi] = useState({});
-	const [articles, setArticles] = useState({});
+	// const [articles, setArticles] = useState({});
 	// const [title, setTitle] = useState()
 	// const [descricao, setDescricao] = useState()
 	// const [img, setImg] = useState()
@@ -38,9 +39,8 @@ function App() {
 	return (
 		<>
 			<BrowserRouter>
-				<Header />
 				<Routes>
-					<Route exact path='/' element={<Home articles={Api} />}></Route>
+					<Route exact path='/' element={<Home api={Api} />}></Route>
 					<Route path='/detalhenoticia' element={<DetalheNoticia />}></Route>
 					<Route path='/ciencia' element={<Ciencia />}></Route>
 					<Route path='/tecnologia' element={<Tecnologia />}></Route>
