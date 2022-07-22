@@ -1,0 +1,39 @@
+.pageHeader > div h1 {
+	font-size: 40px;
+	font-weight: 900;
+	padding-top: 40px;
+}
+.pageHeader > div {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.pageHeader ul {
+	padding: 4px 0;
+	display: flex;
+	border-bottom: 2px solid black;
+}
+
+.pageHeader ul a {
+	padding: 0 10px;
+	border-left: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
+	color: #363636;
+	font-weight: 400;
+	font-size: 11px;
+}
+
+.pageHeader ul a:hover {
+	text-decoration: underline;
+}
+
+.pageHeader ul li:first-child a {
+	border-left: none;
+}
+
+.pageHeader ul li:last-child a {
+	border-right: none;
+}
+
+.pageHeader ul a:active {
+	text-shadow: -0.06ex 0 currentColor, 0.06ex 0 currentColor;
+}

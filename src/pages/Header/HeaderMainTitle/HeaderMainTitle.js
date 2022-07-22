@@ -1,8 +1,8 @@
 import moment from 'moment';
 
-import Title from '../../images/theNewYorkTimes.svg';
-import styles from './HeaderTitle.module.css';
-import WeatherWidget from './WeatherWidget/WeatherWidget';
+import Title from '../../../images/theNewYorkTimes.svg';
+import styles from './HeaderMainTitle.module.css';
+import WeatherWidget from '../WeatherWidget/WeatherWidget';
 
 const HeaderTitle = () => {
 	const date = moment().format('dddd, MMMM D, YYYY');

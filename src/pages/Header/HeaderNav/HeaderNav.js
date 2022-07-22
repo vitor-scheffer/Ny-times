@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './FullNav.module.css';
+import styles from './HeaderNav.module.css';
 
 const FullNav = () => {
 	return (

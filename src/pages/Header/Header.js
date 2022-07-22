@@ -1,43 +1,15 @@
-import HeaderTitle from './HeaderTitle';
-import FullNav from './FullNav';
-
-import { MdOutlineMenu } from 'react-icons/md';
-import { BiSearchAlt2 } from 'react-icons/bi';
+import HeaderMainTitle from './HeaderMainTitle/HeaderMainTitle';
+import HeaderNav from './HeaderNav/HeaderNav';
 
 import styles from './Header.module.css';
+import HeaderTop from './HeaderTop/HeaderTop';
 
 const Header = () => {
 	return (
 		<header>
-			<div className={styles.firstSection}>
-				<div>
-					<MdOutlineMenu />
-					<BiSearchAlt2 />
-				</div>
-				<ul>
-					<li>
-						<a href='#'>U.S.</a>
-					</li>
-					<li>
-						<a href='#'>INTERNATIONAL</a>
-					</li>
-					<li>
-						<a href='#'>CANADA</a>
-					</li>
-					<li>
-						<a href='#'>ESPAÑOL</a>
-					</li>
-					<li>
-						<a href='#'>中文</a>
-					</li>
-				</ul>
-				<div>
-					<button>SUBSCRIBE FOR $0.25/WEEK</button>
-					<button>LOG IN</button>
-				</div>
-			</div>
-			<HeaderTitle />
-			<FullNav />
+			<HeaderTop headerType='main' title='' />
+			<HeaderMainTitle />
+			<HeaderNav />
 			<div className={styles.liveSection}>
 				<p>LIVE</p>
 				<a href='#'>
