@@ -1,5 +1,4 @@
 import HeaderTitle from './HeaderTitle';
-import Nav from './Nav';
 import FullNav from './FullNav';
 
 import { MdOutlineMenu } from 'react-icons/md';

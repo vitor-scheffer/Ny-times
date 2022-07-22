@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  gap: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.mainFooter{
+  display: flex;
+  border-right: 1px solid rgb(226, 226, 226);
+}
+
+.asideFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe {
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.subscribe a {
+  color: rgb(0, 0, 0);
+    display: inline-block;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 700;
+    height: 25px;
+    line-height: 15px;
+    padding-bottom: 0px;
+    white-space: nowrap;
+}
+
+.asideFooter small {
+  color: rgb(0, 0, 0);
+    display: inline-block;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 150px;
+    font-size: 11px;
+    font-weight: 500;
+    height: 23px;
+    line-height: 21px;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 9px;
+}
+
+.bottomNav a {
+  color: #666;
+  font-size: 11px;
+}
+
+footer div {
+  width: 100%;
+}
+
+footer div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 44px;
+}
+
+.mainFooter li {
+  
+  width: 200px;
+}
+
+.mainFooter ul a {
+  color: rgb(0, 0, 0);
+    display: inline-block;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 150px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 23px;
+    line-height: 16px;
+}
+
+footer h3 {
+  color: rgb(51, 51, 51);
+    font-size: 13px;
+    font-weight: 700;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    height: 25px;
+    line-height: 15px;
+    margin: 0px;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+footer img {
+  height: 24px;
+}
+
+footer ul li a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.line {
+  background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(226, 226, 226);
+    border-top: 2px solid rgb(226, 226, 226);
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 0px;
+}
+
+
