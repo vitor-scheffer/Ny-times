@@ -1,13 +1,12 @@
-import SmallNews from "../../components/SmallNews/SmallNews";
-import TituloDescricao from "../../components/TituloDescricao/TituloDescricao";
+import BigImageText from '../../components/BigImageText/BigImageText';
+import Header from '../Header/Header';
 
-const Home = ({news}) => {
+const Home = ({ articles }) => {
 	return (
-		<>
-		<SmallNews titulo={news[0].title} img={news[0].multimedia}/>
-		<SmallNews titulo={news[1].title} img={news[1].multimedia}/>
-		<TituloDescricao titulo={news[4].title} descricao={news[4].abstract} isBorder/>
-		</>
-	)
+		<div>
+			<Header />
+			<BigImageText article={articles} />
+		</div>
+	);
 };
 export default Home;

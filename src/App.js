@@ -15,20 +15,22 @@ import DetalheNoticia from './pages/DetalheNoticia/DetalheNoticia'
 function App() {
   const url = 'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77'
   const [Api, setHome] = useState({})
+  const [articles, setArticles] = useState({});
   // const [title, setTitle] = useState()
   // const [descricao, setDescricao] = useState()
   // const [img, setImg] = useState()
   
   const Setup = async () => {
-    try {
-      let {data} = await axios.get(`${url}`)
-      setHome(data)
-      console.log(Api.results.slice(0,10))
-      return 
-    } catch (e) {
-      console.log(e)
-    }
-  }
+		try {
+			let { data } = await axios.get(`${url}`);
+			setHome(data);
+			setArticles(data.results[6]);
+			console.log(articles);
+			return;
+		} catch (e) {
+			console.log(e);
+		}
+	};
 
   useEffect(() => {
     Setup()
