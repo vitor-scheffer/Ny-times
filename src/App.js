@@ -14,18 +14,19 @@ function App() {
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';
 	const [Api, setHome] = useState({});
+	const [articles, setArticles] = useState({});
 
 	const Setup = async () => {
 		try {
 			let { data } = await axios.get(`${url}`);
 			setHome(data);
+			setArticles(data.results[6]);
+			console.log(articles);
 			return;
 		} catch (e) {
 			console.log(e);
 		}
 	};
-
-	console.log(Api);
 
 	useEffect(() => {
 		Setup();
@@ -35,7 +36,7 @@ function App() {
 			<BrowserRouter>
 				{/* <Header /> */}
 				<Routes>
-					<Route exact path='/' element={<Home />}></Route>
+					<Route exact path='/' element={<Home articles={articles} />}></Route>
 					<Route path='/ciencia' element={<Ciencia />}></Route>
 					<Route path='/tecnologia' element={<Tecnologia />}></Route>
 					<Route path='/saude' element={<Saude />}></Route>
