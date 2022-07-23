@@ -1,7 +1,6 @@
 .opinion {
-	padding: 4px 0;
-	border-bottom: 1px solid #dfdfdf;
-	margin-bottom: 10px;
+	display: flex;
+	padding: 16px 0;
 }
 
 .opinion p {
@@ -19,4 +18,8 @@
 
 .opinion h3:hover {
 	color: #666;
+}
+
+.opinion img {
+	padding-left: 10px;
 }

@@ -6,6 +6,15 @@
 
 }
 
+.opinion {
+	padding: 10px 0;
+	border-bottom: 1px solid black;
+}
+
+.missed {
+	padding: 10px 0;
+}
+
 .smallDouble {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -24,4 +33,11 @@
 	width: 1px;
 }
 
+.missed span,
+.opinion span {
+	font-family: nyt-franklin,helvetica,arial,sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
 

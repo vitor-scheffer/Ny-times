@@ -26,8 +26,8 @@ const FirstNews = ({mainNews}) => {
           <News mainNews={mainNews[1]} descricao={mainNews[1].abstract} />
         </div>
         <div>
-          <img src={mainNews[0].multimedia[0].url} alt='' />
-          <p><small>{mainNews[0].multimedia[0].copyright}</small></p>
+          <img src={mainNews[0].multimedia[1].url} alt='' />
+          <p><small>{mainNews[0].multimedia[1].copyright}</small></p>
         </div>  
       </div>
       <div className={styles.bottomNews}>

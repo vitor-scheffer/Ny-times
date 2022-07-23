@@ -6,6 +6,7 @@ import styles from './Home.module.css';
 import SmallNews from '../../components/SmallNews/SmallNews'
 import FirstNews from '../../components/FirstNews/FirstNews'
 import Sports from '../../components/Sports/SportsNews'
+import Missed from '../../components/Missed/Missed';
 
 const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => {
 	const [articles, setArticles] = useState({});
@@ -13,6 +14,7 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 	const [smallAside, setSmallAside] = useState([]);
 	const [mainNews, setMainNews] = useState([]);
 	const [sports, setSports] = useState([]);
+	const [missed, setMissed] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
 
 	useEffect(() => {
@@ -22,8 +24,11 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 			setArticles(api.results[6]);
 			setOpinion(api.results.filter((result) => result.section === 'opinion'));
 			setSmallAside(api.results.slice(13, 15));
+			setMissed(api.results.slice(28));
 		}
 	}, [api]);
+
+	console.log(opinion)
 
 	return (
 		<div>
@@ -44,9 +49,27 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 						<div className={styles.line}></div>
 						<SmallNews img={img} title={title} descricao={descricao} setImg={setImg} setTitle={setTitle} setDescricao={setDescricao} smallAside={smallAside.slice(1,2)}/>
 					</div>
-					{opinion.length > 0 && <Opinion article={opinion.slice(0, 1)} />}
-					{opinion.length > 0 && <Opinion article={opinion.slice(1, 2)} />}
-					{opinion.length > 0 && <Opinion article={opinion.slice(2, 3)} />}
+					<div className={styles.opinion}>
+					<span>Opinion</span>
+						{opinion.length > 0 && <Opinion isImg isBorder article={opinion.slice(0, 1)} />}
+						{opinion.length > 0 && <Opinion isBorder article={opinion.slice(1, 2)} />}
+						{opinion.length > 0 && <Opinion isBorder article={opinion.slice(2, 3)} />}
+						{opinion.length > 0 && <Opinion article={opinion.slice(3, 4)} />}
+					</div>
+					
+					<div className={styles.missed}>
+						<span>In Case You Missed It</span>
+					<Missed isBorder missed={missed.slice(0,1)}/>
+					<Missed isBorder missed={missed.slice(1,2)}/>
+					<Missed isBorder missed={missed.slice(2,3)}/>
+					<Missed isBorder missed={missed.slice(3,4)}/>
+					<Missed isBorder missed={missed.slice(4,5)}/>
+					<Missed isBorder missed={missed.slice(5,6)}/>
+					<Missed isBorder missed={missed.slice(6,7)}/>
+					<Missed isBorder missed={missed.slice(7,8)}/>
+					<Missed missed={missed.slice(8,9)}/>
+					</div>
+					
 				</aside>
 			</main>
 		</div>
