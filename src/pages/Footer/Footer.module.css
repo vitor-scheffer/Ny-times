@@ -65,6 +65,10 @@
     padding-bottom: 0;
 }
 
+.asideFooter small:hover {
+  text-decoration: underline;
+}
+
 .bottomNav {
   display: flex;
   justify-content: space-evenly;

@@ -1,16 +1,23 @@
 import {Link} from 'react-router-dom'
 import styles from './SmallNews.module.css'
 
-const SmallNews = ({img, titulo}) => {
-  const smallImg = img.filter(e => e.height === 150)
-
+const SmallNews = ({smallAside}) => {
+  const isSmall = Object.keys(smallAside).length > 0;
+  
   return (
+    
+    <>
+    {isSmall ? (
     <div className={styles.smNews}>
       <Link to="/detalhenoticia">
-      <img src={smallImg[0].url} alt="" />
-      <h3>{titulo}</h3>
+      <img src={smallAside.multimedia[2].url} alt="" />
+      <h3>{smallAside.title}</h3>
       </Link>
     </div>
+    
+    ) : (<div></div>) }
+    </>
+    
   )
 }
 export default SmallNews
