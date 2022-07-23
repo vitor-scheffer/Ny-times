@@ -2,8 +2,6 @@ import moment from 'moment';
 import styles from './LatestNews.module.css';
 
 const LatestNews = ({ article }) => {
-	console.log(article);
-
 	const data = moment(article.update_date).format('MMMM, D YYYY');
 	let byline = article.byline.toUpperCase();
 	byline = byline.replace('Y', 'y');
@@ -18,7 +16,11 @@ const LatestNews = ({ article }) => {
 				<p>{article.abstract}</p>
 				<small>{byline}</small>
 			</div>
-			<img src={article.multimedia[1].url} alt='' />
+			{'multimedia' in article && article.multimedia !== null ? (
+				<img src={article.multimedia[1].url} alt='' />
+			) : (
+				<></>
+			)}
 		</div>
 	);
 };

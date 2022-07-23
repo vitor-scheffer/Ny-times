@@ -6,7 +6,7 @@ const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
 	const smallExists = Object.keys(smallAside).length > 0;
 
 	useEffect(() => {
-		if (setDescricao && setImg && setTitle) {
+		if (setDescricao && setImg && setTitle && smallExists) {
 			setDescricao(smallAside[0].abstract);
 			setImg(smallAside[0].url);
 			setTitle(smallAside[0].title);

@@ -42,12 +42,12 @@ const Ciencia = () => {
 		<div>
 			<PageHeader title='Science' navArray={navArray} />
 			{articlesExists ? (
-				<LatestNews article={scienceArticles.results[3]} />
+				scienceArticles.results
+					.slice(3)
+					.map((article) => <LatestNews key={article.url} article={article} />)
 			) : (
 				<></>
 			)}
-
-			{/* <LatestNews article={scienceArticles.results[3]} /> */}
 		</div>
 	);
 };
