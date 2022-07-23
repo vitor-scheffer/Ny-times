@@ -4,12 +4,15 @@ import Opinion from '../../components/Opinion/Opinion';
 import Header from '../Header/Header';
 import styles from './Home.module.css';
 import SmallNews from '../../components/SmallNews/SmallNews'
+import FirstNews from '../../components/FirstNews/FirstNews'
 
 const Home = ({ api }) => {
 	const [articles, setArticles] = useState({});
 	const [opinion, setOpinion] = useState([]);
 	const [smallAside, setSmallAside] = useState([]);
+	const [mainNews, setMainNews] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
+
 
 	useEffect( () => {
 		
@@ -17,15 +20,19 @@ const Home = ({ api }) => {
 			setArticles(api.results[6]);
 			setOpinion(api.results.filter((result) => result.section === 'opinion'));
 			setSmallAside(api.results.slice(13, 15))
+			setMainNews(api.results.slice(0,3))
+
 		}
 	}, [api]);
-
+	
+	console.log(smallAside)
 	return (
 		<div>
 			<Header />
 			<main className={styles.home}>
 				{/* coluna principal */}
 				<div>
+					<FirstNews mainNews={mainNews} />
 					<BigImageText article={articles} />
 				</div>
 				{/* linha entre main e aside */}

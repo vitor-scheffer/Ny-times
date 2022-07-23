@@ -1,7 +1,8 @@
 .home {
 	display: grid;
-	grid-template-columns: 3fr 1px 1fr;
+	grid-template-columns: 830px 1px 336.91px;
 	gap: calc(1rem + 1px);
+	padding: 20px 0;
 
 }
 
@@ -9,17 +10,16 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: calc(1rem + 1px);
-	padding: 10px 0;
 	border-bottom: 1px solid black;
 }
 
 .line {
 	background-color: rgb(226, 226, 226);
+	margin-bottom: 24px;
 	width: 1px;
 }
 
 .lineLg {
-	margin-top: 10px;
 	background-color: rgb(226, 226, 226);
 	width: 1px;
 }

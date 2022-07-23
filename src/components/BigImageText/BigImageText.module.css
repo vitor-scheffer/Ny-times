@@ -26,6 +26,8 @@
 }
 
 .bigImageText p {
+	display: flex;
+	justify-content: end;
 	color: #666;
 	font-size: 15px;
 }
