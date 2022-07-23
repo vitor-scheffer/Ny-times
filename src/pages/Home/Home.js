@@ -7,14 +7,13 @@ import SmallNews from '../../components/SmallNews/SmallNews'
 import FirstNews from '../../components/FirstNews/FirstNews'
 import Sports from '../../components/Sports/SportsNews'
 
-const Home = ({ api }) => {
+const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => {
 	const [articles, setArticles] = useState({});
 	const [opinion, setOpinion] = useState([]);
 	const [smallAside, setSmallAside] = useState([]);
 	const [mainNews, setMainNews] = useState([]);
 	const [sports, setSports] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
-
 
 	useEffect( () => {
 		
@@ -26,7 +25,7 @@ const Home = ({ api }) => {
 			setSmallAside(api.results.slice(13, 15))
 		}
 	}, [api]);
-	
+
 	return (
 		<div>
 			<Header />
@@ -42,11 +41,13 @@ const Home = ({ api }) => {
 				{/* aside */}
 				<aside>
 					<div className={styles.smallDouble}>
-						<SmallNews smallAside={smallAside.slice(0,1)}/>
+						<SmallNews img={img} title={title} descricao={descricao} setImg={setImg} setTitle={setTitle} setDescricao={setDescricao} smallAside={smallAside.slice(0,1)}/>
 						<div className={styles.line}></div>
-						<SmallNews smallAside={smallAside.slice(1,2)}/>
+						<SmallNews img={img} title={title} descricao={descricao} setImg={setImg} setTitle={setTitle} setDescricao={setDescricao} smallAside={smallAside.slice(1,2)}/>
 					</div>
 					{opinion.length > 0 && <Opinion article={opinion.slice(0, 1)} />}
+					{opinion.length > 0 && <Opinion article={opinion.slice(1, 2)} />}
+					{opinion.length > 0 && <Opinion article={opinion.slice(2, 3)} />}
 				</aside>
 			</main>
 		</div>

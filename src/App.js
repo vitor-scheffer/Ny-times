@@ -18,9 +18,9 @@ function App() {
 
 	const [Api, setApi] = useState({});
 	// const [articles, setArticles] = useState({});
-	// const [title, setTitle] = useState()
-	// const [descricao, setDescricao] = useState()
-	// const [img, setImg] = useState()
+	const [title, setTitle] = useState()
+	const [descricao, setDescricao] = useState()
+	const [img, setImg] = useState()
 
 	const Setup = async () => {
 		try {
@@ -32,6 +32,8 @@ function App() {
 		}
 	};
 
+	console.log(title)
+
 	useEffect(() => {
 		Setup();
 	}, []);
@@ -40,8 +42,8 @@ function App() {
 		<>
 			<BrowserRouter>
 				<Routes>
-					<Route exact path='/' element={<Home api={Api} />}></Route>
-					<Route path='/detalhenoticia' element={<DetalheNoticia />}></Route>
+					<Route exact path='/' element={<Home api={Api} setTitle={setTitle} setImg={setImg} setDescricao={setDescricao} img={img} title={title} descricao={descricao}/>}></Route>
+					<Route path='/detalhenoticia' element={<DetalheNoticia title={title} descricao={descricao} img={img}/>}></Route>
 					<Route path='/ciencia' element={<Ciencia />}></Route>
 					<Route path='/tecnologia' element={<Tecnologia />}></Route>
 					<Route path='/saude' element={<Saude />}></Route>

@@ -1,8 +1,18 @@
 import {Link} from 'react-router-dom'
 import styles from './SmallNews.module.css'
+import {useEffect} from 'react'
 
-const SmallNews = ({smallAside}) => {
+const SmallNews = ({smallAside, setDescricao, setImg, setTitle}) => {
   const smallExists = Object.keys(smallAside).length > 0;
+  
+  useEffect( () => {
+		
+		if (setDescricao && setImg && setTitle) {
+			setDescricao(smallAside[0].abstract)
+      setImg(smallAside[0].url)
+      setTitle(smallAside[0].title)
+		}
+	}, [smallAside]);
   
   
   return (
