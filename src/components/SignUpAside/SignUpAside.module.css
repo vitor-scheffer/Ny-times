@@ -1,0 +1,46 @@
+.signUpSection {
+	margin-top: 100px;
+}
+
+.signUpSection > div {
+	border-top: 1px solid #dfdfdf;
+	margin-bottom: 80px;
+	padding-top: 16px;
+}
+
+.signUpSection h2 {
+	color: #121212;
+	font-size: 11px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.signUpSection p {
+	color: #727272;
+	font-size: 14px;
+	margin-bottom: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.signUpSection button {
+	border: 1px solid #dfdfdf;
+	background-color: transparent;
+	border-radius: 3px;
+	color: #363636;
+	font-size: 11px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: 500;
+	letter-spacing: 1.1;
+	padding: 6px 8px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.signUpSection button:hover {
+	background-color: #f8f8f8;
+}
+
+.signUpSection a {
+	display: flex;
+	gap: 6px;
+}
