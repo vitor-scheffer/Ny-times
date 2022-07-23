@@ -8,7 +8,9 @@ const BigImageText = ({ article }) => {
 			{articleExists ? (
 				<div className={styles.bigImageText}>
 					<div>
-						<h3>{article.title}</h3>
+						<a href='#'>
+							<h3>{article.title}</h3>
+						</a>
 						<p>{article.abstract}</p>
 					</div>
 					<div>

@@ -14,4 +14,9 @@
 
 .opinion h3 {
 	font-family: 'Times New Roman', Times, serif;
+	color: black;
+}
+
+.opinion h3:hover {
+	color: #666;
 }

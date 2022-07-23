@@ -1,13 +1,21 @@
 .smNews {
+<<<<<<< HEAD
   max-width: 150px;
   margin-bottom: 24px;
+=======
+	max-width: 150px;
+>>>>>>> f45de9b (pequenas correções estilo)
 }
 
 .smNews h3 {
-  color: #121212;
-  font-size: 1rem;
-  line-height: 1.2em;
-  padding-top: 10px;
-  letter-spacing: 0.01em;
-  -webkit-font-smoothing: antialiased;
+	color: #121212;
+	font-size: 1rem;
+	line-height: 1.2em;
+	padding-top: 10px;
+	letter-spacing: 0.01em;
+	-webkit-font-smoothing: antialiased;
+}
+
+.smNews h3:hover {
+	color: #666;
 }
