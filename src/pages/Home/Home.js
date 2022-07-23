@@ -5,27 +5,28 @@ import Header from '../Header/Header';
 import styles from './Home.module.css';
 import SmallNews from '../../components/SmallNews/SmallNews'
 import FirstNews from '../../components/FirstNews/FirstNews'
+import Sports from '../../components/Sports/SportsNews'
 
 const Home = ({ api }) => {
 	const [articles, setArticles] = useState({});
 	const [opinion, setOpinion] = useState([]);
 	const [smallAside, setSmallAside] = useState([]);
 	const [mainNews, setMainNews] = useState([]);
+	const [sports, setSports] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
 
 
 	useEffect( () => {
 		
 		if (apiExists) {
+			setMainNews(api.results.slice(0,5))
+			setSports(api.results[5])
 			setArticles(api.results[6]);
 			setOpinion(api.results.filter((result) => result.section === 'opinion'));
 			setSmallAside(api.results.slice(13, 15))
-			setMainNews(api.results.slice(0,3))
-
 		}
 	}, [api]);
 	
-	console.log(smallAside)
 	return (
 		<div>
 			<Header />
@@ -33,6 +34,7 @@ const Home = ({ api }) => {
 				{/* coluna principal */}
 				<div>
 					<FirstNews mainNews={mainNews} />
+					<Sports sports={sports}/>
 					<BigImageText article={articles} />
 				</div>
 				{/* linha entre main e aside */}
@@ -40,9 +42,9 @@ const Home = ({ api }) => {
 				{/* aside */}
 				<aside>
 					<div className={styles.smallDouble}>
-						<SmallNews smallAside={smallAside[0]}/>
+						<SmallNews smallAside={smallAside.slice(0,1)}/>
 						<div className={styles.line}></div>
-						<SmallNews smallAside={smallAside[1]}/>
+						<SmallNews smallAside={smallAside.slice(1,2)}/>
 					</div>
 					{opinion.length > 0 && <Opinion article={opinion.slice(0, 1)} />}
 				</aside>

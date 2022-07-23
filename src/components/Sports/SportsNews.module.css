@@ -1,0 +1,25 @@
+.containerFlex {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+  font-size: 13px;
+  line-height: 1.2em;
+  border-bottom: 1px solid black;
+}
+
+.containerFlex img {
+  max-width: 275.25px
+}
+
+.containerFlex small {
+  display: flex;
+  justify-content: end;
+  font-size: 10px;
+  color:  #666;
+}
+
+.containerFlex p {
+  color: #5a5a5a;
+  padding-top: 10px;
+}

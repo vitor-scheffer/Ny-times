@@ -33,9 +33,9 @@ const FirstNews = ({mainNews}) => {
       <div className={styles.bottomNews}>
           <BottomNews mainNews={mainNews[2]}/>
           <div className={styles.line}></div>
-          <BottomNews mainNews={mainNews[2]}/>
+          <BottomNews mainNews={mainNews[3]}/>
           <div className={styles.line}></div>
-          <BottomNews mainNews={mainNews[2]} />
+          <BottomNews mainNews={mainNews[4]} />
       </div>
       </section>
       
