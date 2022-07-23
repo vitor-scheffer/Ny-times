@@ -15,14 +15,13 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 	const [sports, setSports] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
 
-	useEffect( () => {
-		
+	useEffect(() => {
 		if (apiExists) {
 			setMainNews(api.results.slice(0,5))
 			setSports(api.results[5])
 			setArticles(api.results[6]);
 			setOpinion(api.results.filter((result) => result.section === 'opinion'));
-			setSmallAside(api.results.slice(13, 15))
+			setSmallAside(api.results.slice(13, 15));
 		}
 	}, [api]);
 

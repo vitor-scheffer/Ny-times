@@ -1,52 +1,25 @@
-<<<<<<< HEAD
-import {Link} from 'react-router-dom'
-import styles from './SmallNews.module.css'
-import {useEffect} from 'react'
-
-const SmallNews = ({smallAside, setDescricao, setImg, setTitle}) => {
-  const smallExists = Object.keys(smallAside).length > 0;
-  
-  useEffect( () => {
-		
-		if (setDescricao && setImg && setTitle) {
-			setDescricao(smallAside[0].abstract)
-      setImg(smallAside[0].url)
-      setTitle(smallAside[0].title)
-		}
-	}, [smallAside]);
-  
-  
-  return (
-    
-    <>
-    {smallExists ? (
-    <div className={styles.smNews}>
-      <Link to="/detalhenoticia">
-      <img src={smallAside[0].multimedia[2].url} alt="" />
-      <h3>{smallAside[0].title}</h3>
-      </Link>
-    </div>
-    
-    ) : (<div></div>) }
-    </>
-    
-  )
-}
-export default SmallNews
-=======
 import { Link } from 'react-router-dom';
 import styles from './SmallNews.module.css';
+import { useEffect } from 'react';
 
-const SmallNews = ({ smallAside }) => {
-	const isSmall = smallAside && Object.keys(smallAside).length > 0;
+const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
+	const smallExists = Object.keys(smallAside).length > 0;
+
+	useEffect(() => {
+		if (setDescricao && setImg && setTitle) {
+			setDescricao(smallAside[0].abstract);
+			setImg(smallAside[0].url);
+			setTitle(smallAside[0].title);
+		}
+	}, [smallAside]);
 
 	return (
 		<>
-			{isSmall ? (
+			{smallExists ? (
 				<div className={styles.smNews}>
 					<Link to='/detalhenoticia'>
-						<img src={smallAside.multimedia[2].url} alt='' />
-						<h3>{smallAside.title}</h3>
+						<img src={smallAside[0].multimedia[2].url} alt='' />
+						<h3>{smallAside[0].title}</h3>
 					</Link>
 				</div>
 			) : (
@@ -56,4 +29,3 @@ const SmallNews = ({ smallAside }) => {
 	);
 };
 export default SmallNews;
->>>>>>> f45de9b (pequenas correções estilo)
