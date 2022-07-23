@@ -1,0 +1,16 @@
+.flexContainer {
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.flexContainer img {
+  max-width: 100%
+}
+
+.flexContainer h3 {
+  font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+  font-size: 24px;
+  font-weight: 300;
+}

@@ -7,6 +7,7 @@ import SmallNews from '../../components/SmallNews/SmallNews'
 import FirstNews from '../../components/FirstNews/FirstNews'
 import Sports from '../../components/Sports/SportsNews'
 import Missed from '../../components/Missed/Missed';
+import TopAside from '../../components/TopAside/TopAside'
 
 const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => {
 	const [articles, setArticles] = useState({});
@@ -15,6 +16,7 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 	const [mainNews, setMainNews] = useState([]);
 	const [sports, setSports] = useState([]);
 	const [missed, setMissed] = useState([]);
+	const [mainAside, setMainAside] = useState([]);
 	const apiExists = Object.keys(api).length > 0;
 
 	useEffect(() => {
@@ -23,12 +25,13 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 			setSports(api.results[5])
 			setArticles(api.results[6]);
 			setOpinion(api.results.filter((result) => result.section === 'opinion'));
+			setMainAside(api.results.slice(12,13));
 			setSmallAside(api.results.slice(13, 15));
 			setMissed(api.results.slice(28));
 		}
 	}, [api]);
 
-	console.log(opinion)
+	console.log(mainAside)
 
 	return (
 		<div>
@@ -44,6 +47,7 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 				<div className={styles.lineLg}></div>
 				{/* aside */}
 				<aside>
+					<TopAside mainAside={mainAside}/>
 					<div className={styles.smallDouble}>
 						<SmallNews img={img} title={title} descricao={descricao} setImg={setImg} setTitle={setTitle} setDescricao={setDescricao} smallAside={smallAside.slice(0,1)}/>
 						<div className={styles.line}></div>
