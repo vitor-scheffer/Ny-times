@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import LatestNews from '../../components/LatestNews/LatestNews';
-import SignUpAside from '../../components/SignUpAside/SignUpAside';
-import styles from './Ciencia.module.css';
+import LatestSection from '../../components/LatestSection/LatestSection';
+import Tabs from '../../components/Tabs/Tabs';
 
 const Ciencia = () => {
 	const [scienceArticles, setScienceArticles] = useState({});
@@ -43,27 +42,8 @@ const Ciencia = () => {
 	return (
 		<div>
 			<PageHeader title='Science' navArray={navArray} />
-			<section className={styles.latestSection}>
-				<div>
-					{articlesExists ? (
-						scienceArticles.results
-							.slice(3)
-							.map((article) => (
-								<LatestNews key={article.url} article={article} />
-							))
-					) : (
-						<></>
-					)}
-				</div>
-				{articlesExists ? (
-					<SignUpAside
-						article={scienceArticles.results[0]}
-						socialMedia='NYTimesScience'
-					/>
-				) : (
-					<></>
-				)}
-			</section>
+			<Tabs articles={scienceArticles} />
+			{/* <LatestSection articles={scienceArticles} /> */}
 		</div>
 	);
 };

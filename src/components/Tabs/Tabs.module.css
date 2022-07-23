@@ -1,0 +1,31 @@
+.tabs {
+	border-top: 2px solid black;
+}
+
+.tabs ul {
+	margin-top: -10px;
+	border-bottom: 1px solid grey;
+}
+
+.tabs ul {
+	display: flex;
+}
+
+.tabs ul li {
+	margin-left: 8px;
+	background-color: transparent;
+	padding: 16px 40px 10px 40px;
+	display: flex;
+	align-items: center;
+	font-weight: 800;
+	color: #666;
+}
+
+li.active {
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+	background-color: white !important;
+	margin-bottom: -1px;
+	color: #363636 !important;
+}
