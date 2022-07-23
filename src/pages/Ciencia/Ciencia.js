@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import LatestSection from '../../components/LatestSection/LatestSection';
 import Tabs from '../../components/Tabs/Tabs';
 
 const Ciencia = () => {
 	const [scienceArticles, setScienceArticles] = useState({});
+	const [social, setSocial] = useState(true);
+
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/science.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';
 
@@ -26,7 +27,7 @@ const Ciencia = () => {
 		try {
 			let { data } = await axios.get(`${url}`);
 			setScienceArticles(data);
-			console.log(scienceArticles);
+			console.log('ciencia', social);
 			return;
 		} catch (e) {
 			console.log(e);
@@ -37,13 +38,12 @@ const Ciencia = () => {
 		Setup();
 	}, []);
 
-	const articlesExists = Object.keys(scienceArticles).length > 0;
+	// const articlesExists = Object.keys(scienceArticles).length > 0;
 
 	return (
 		<div>
 			<PageHeader title='Science' navArray={navArray} />
-			<Tabs articles={scienceArticles} />
-			{/* <LatestSection articles={scienceArticles} /> */}
+			<Tabs articles={scienceArticles} social={social} />
 		</div>
 	);
 };

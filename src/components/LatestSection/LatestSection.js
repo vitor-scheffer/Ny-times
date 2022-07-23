@@ -2,8 +2,9 @@ import LatestNews from './LatestNews/LatestNews';
 import SignUpAside from '../SignUpAside/SignUpAside';
 import styles from './LatestSection.module.css';
 
-const LatestSection = ({ articles }) => {
+const LatestSection = ({ articles, social }) => {
 	const articlesExists = Object.keys(articles).length > 0;
+	console.log('Social', social);
 
 	return (
 		<section className={styles.latestSection}>
@@ -18,7 +19,7 @@ const LatestSection = ({ articles }) => {
 					<></>
 				)}
 			</div>
-			{articlesExists ? (
+			{articlesExists && social ? (
 				<SignUpAside
 					article={articles.results[0]}
 					socialMedia='NYTimesScience'
