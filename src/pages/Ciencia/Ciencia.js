@@ -5,6 +5,7 @@ import Tabs from '../../components/Tabs/Tabs';
 import HeroNews from '../../components/HeroNews/HeroNews';
 import styles from './Ciencia.module.css';
 import ListSection from '../../components/ListSection/ListSection';
+import ListArticleDateTag from '../../components/ArticleDateTag/ArticleDateTag';
 
 const Ciencia = () => {
 	const [scienceArticles, setScienceArticles] = useState({});
@@ -47,17 +48,27 @@ const Ciencia = () => {
 			{articlesExists ? (
 				<div className={styles.sciencePage}>
 					<PageHeader title='Science' navArray={navArray} />
-					<HeroNews article={scienceArticles.results[2]} />
-					{/* lista de environment */}
-					<ListSection
-						articles={scienceArticles.results.slice(2, 7)}
-						title='Climate and Environment'
-					/>
-					{/* outra lista */}
-					<ListSection
-						articles={scienceArticles.results.slice(2, 7)}
-						title='Climate and Environment'
-					/>
+					<section className={styles.topSection}>
+						<HeroNews article={scienceArticles.results[2]} />
+						<div>
+							{scienceArticles.results.slice(-3).map((article) => (
+								<ListArticleDateTag article={article} />
+							))}
+						</div>
+					</section>
+
+					<section>
+						{/* lista de environment */}
+						<ListSection
+							articles={scienceArticles.results.slice(2, 7)}
+							title='Climate and Environment'
+						/>
+						{/* outra lista */}
+						<ListSection
+							articles={scienceArticles.results.slice(2, 7)}
+							title='Climate and Environment'
+						/>
+					</section>
 					<Tabs articles={scienceArticles} social={social} />
 				</div>
 			) : (

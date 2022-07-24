@@ -1,0 +1,46 @@
+.ArticleDateTagContainer {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.ArticleDateTagContainer:last-child {
+	border-bottom: none;
+}
+
+.ArticleDateTagContainer img {
+	width: 75px;
+}
+
+.ArticleDateTagContainer > div:first-child {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.ArticleDateTagContainer > div > div > p:first-child {
+	font-size: 11px;
+	font-weight: 500;
+	color: #666;
+}
+
+.ArticleDateTagContainer > div:nth-child(2) {
+	font-size: 16px;
+	color: #121212;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.ArticleDateTagContainer > div:nth-child(2) > div {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #727272;
+}
+.ArticleDateTagContainer > div:nth-child(2) > div > small:first-child {
+	margin-right: 3px;
+}
+
+.ArticleDateTagContainer a h2 {
+	font-size: 22px;
+	font-family: 'Times New Roman', Times, serif;
+}

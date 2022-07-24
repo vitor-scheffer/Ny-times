@@ -2,7 +2,6 @@ import styles from './ListArticle.module.css';
 
 const ListArticle = ({ article }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
-	console.log('listarticle works');
 
 	return (
 		<>
