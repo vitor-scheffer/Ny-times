@@ -1,7 +1,34 @@
+import { useEffect } from 'react'
 import styles from './Opinion.module.css';
+import img1 from '../../images/authors/author1.webp'
+import img2 from '../../images/authors/author2.webp'
+import img3 from '../../images/authors/author3.webp'
+import img4 from '../../images/authors/author4.webp'
 
-const Opinion = ({ article, isImg, isBorder}) => {
+const Opinion = ({ article, isImg, isAuthor, isBorder}) => {
 	const articleExists = article && article.length > 0;
+
+const authors = [
+	{
+		name: 'MICHELLE GOLDBERG',
+		url: img2
+	},
+	{
+		name: 'JAMELLE BOUIE',
+		url : img1
+	},
+	{
+		name: 'PAUL KRUGMAN',
+		url : img3
+	},
+	{
+		name: 'ROSS DOUTHAT',
+		url : img4
+	}
+]
+
+let img;
+authors.forEach(e => {if (e.name === article[0].kicker.toUpperCase()) {img = e.url}})
 
 	return (
 		<>
@@ -12,6 +39,7 @@ const Opinion = ({ article, isImg, isBorder}) => {
 						<h3>{article[0].title}</h3>
 					</div>
 					{isImg ? <img src={article[0].multimedia[2].url} alt='Thumbnail' /> : ''}
+					{isAuthor ? <img style={{maxHeight: '44px'}}src={img} alt="" /> : ''} 
 				</div>
 			) : (
 				<></>

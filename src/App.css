@@ -17,3 +17,7 @@ a {
 a:hover {
 	color: #666;
 }
+
+h3:hover {
+	cursor: pointer
+}
