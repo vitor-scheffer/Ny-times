@@ -4,6 +4,15 @@
 	padding: 4px 0;
 }
 
+.listSectionTag {
+	margin: 10px 0;
+	padding: 4px 0;
+}
+
+.listContainer > div:first-child > div {
+	border-left: none;
+}
+
 .listSectionContainer div:first-child {
 	display: flex;
 	align-items: flex-start;

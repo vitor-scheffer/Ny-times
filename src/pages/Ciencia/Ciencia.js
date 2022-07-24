@@ -58,6 +58,13 @@ const Ciencia = () => {
 					</section>
 
 					<section>
+						<ListSection
+							articles={scienceArticles.results.slice(7, 12)}
+							withTag={true}
+						/>
+					</section>
+
+					<section>
 						{/* lista de environment */}
 						<ListSection
 							articles={scienceArticles.results.slice(2, 7)}
