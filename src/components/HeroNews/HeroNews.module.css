@@ -13,23 +13,12 @@
 	max-width: 810px;
 }
 
-.heroNews a,
-.heroNews small {
-	padding: 0 120px;
-	text-align: center;
-}
-
 .heroNews > div:first-child small {
 	color: #666;
 	font-size: 10px;
 	text-align: right;
 	margin-top: 2px;
 	padding: 0;
-}
-
-.heroNews p {
-	padding: 0 100px;
-	text-align: center;
 }
 
 .heroNews a {
@@ -50,4 +39,25 @@
 	display: flex;
 	justify-content: center;
 	gap: 2px;
+}
+
+.heroNoPadding {
+	text-align: left;
+}
+
+h2.heroNoPadding {
+	text-align: left;
+}
+
+div.heroNoPadding {
+	align-self: flex-start;
+}
+
+.heroNoPadding small {
+	font-size: 11px;
+}
+
+.heroPadding {
+	padding: 0 120px;
+	text-align: center;
 }

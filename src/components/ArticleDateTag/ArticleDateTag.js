@@ -1,7 +1,7 @@
 import moment from 'moment';
 import styles from './ArticleDateTag.module.css';
 
-const ListArticleDateTag = ({ article }) => {
+const ListArticleDateTag = ({ article, inverted }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
 	let relativeDate;
 	let byline;
@@ -23,10 +23,16 @@ const ListArticleDateTag = ({ article }) => {
 							</a>
 						</div>
 
-						<img src={article.multimedia[2].url} alt='Article' />
+						{!inverted && <img src={article.multimedia[2].url} alt='Article' />}
 					</div>
 					<div>
-						<p>{article.abstract}</p>
+						{inverted && (
+							<div className={styles.inverted}>
+								<img src={article.multimedia[2].url} alt='Article' />
+								<p>{article.abstract}</p>
+							</div>
+						)}
+						{!inverted && <p>{article.abstract}</p>}
 						<div>
 							<small>{relativeDate} &bull;</small>
 							<small>{byline}</small>
