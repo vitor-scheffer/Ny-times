@@ -68,10 +68,14 @@
 
 /* Page header */
 
-.firstSection > img.hide,
+.firstSection > a.hide,
 .firstSection > div:first-child > a:nth-child(3).hide,
 .firstSection > ul.hide {
 	display: none;
+}
+
+.firstSection.hide {
+	border-bottom: none;
 }
 
 .firstSection img {

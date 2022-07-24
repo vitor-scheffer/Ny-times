@@ -1,4 +1,5 @@
 import styles from './SportsNews.module.css'
+import { Link } from 'react-router-dom'
 
 const SportsNews = ({sports}) => {
   const sportsExists = Object.keys(sports).length > 0;
@@ -6,6 +7,7 @@ const SportsNews = ({sports}) => {
   return (
     <>
     {sportsExists ? (
+    <Link to={`/detalhenoticia/${sports.title}/${sports.abstract}`}>
     <div className={styles.containerFlex}>
       <div>
         <h3>{sports.title}</h3>
@@ -16,6 +18,7 @@ const SportsNews = ({sports}) => {
         <p><small>{sports.multimedia[1].copyright}</small></p>
       </div>
     </div>
+    </Link>
   
     ) : (<div></div>) }
     </>

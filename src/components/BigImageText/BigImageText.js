@@ -1,4 +1,5 @@
 import styles from './BigImageText.module.css';
+import { Link } from 'react-router-dom'
 
 const BigImageText = ({ article }) => {
 	const articleExists = Object.keys(article).length > 0;
@@ -6,6 +7,7 @@ const BigImageText = ({ article }) => {
 	return (
 		<>
 			{articleExists ? (
+				<Link to={`/detalhenoticia/${article.title}/${article.abstract}`}>
 				<div className={styles.bigImageText}>
 					<div>
 						<a href='#'>
@@ -21,6 +23,7 @@ const BigImageText = ({ article }) => {
 						</p>
 					</div>
 				</div>
+				</Link>
 			) : (
 				<div></div>
 			)}

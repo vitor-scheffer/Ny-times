@@ -1,6 +1,7 @@
 import { MdOutlineMenu } from 'react-icons/md';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import Title from '../../../images/theNewYorkTimes.svg';
+import { Link } from 'react-router-dom';
 
 import styles from './HeaderTop.module.css';
 
@@ -47,7 +48,7 @@ const HeaderTop = (props) => {
 					<a href='#'>中文</a>
 				</li>
 			</ul>
-			<img className={imgClasse} src={Title} alt='The New York Times'></img>
+			<Link to="/" className={imgClasse}><img className={imgClasse} src={Title} alt='The New York Times'></img></Link>
 			<div>
 				<button>SUBSCRIBE FOR $0.25/WEEK</button>
 				<button>LOG IN</button>

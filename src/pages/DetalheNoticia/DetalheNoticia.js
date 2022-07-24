@@ -4,20 +4,18 @@ import share from '../../images/share-1.svg'
 import save from '../../images/save.svg'
 import HeaderTop from '../../pages/Header/HeaderTop/HeaderTop';
 import { useParams } from 'react-router-dom'
-
-
-
+import { useEffect } from 'react'
 
 const DetalheNoticia = ({Api}) => {
-	
 		let {title} = useParams();
 		let {descricao} = useParams();
 		let img;
-		Api.results.find(e => {if(e.title === title) {img = e.multimedia[0].url}})
 
+				Api.results.find(e => {if(e.title === title) {img = e.multimedia[0].url}})
+		
 	return (
 		<div>
-			<HeaderTop type='page' title='' className={styles.header}/>
+			<HeaderTop headerType='page' title='' className={styles.header}/>
 			<div className={styles.flexContainer}>
 				<h3>{title}</h3>
 				<p>{descricao}</p>
