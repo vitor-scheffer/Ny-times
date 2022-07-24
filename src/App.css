@@ -19,5 +19,6 @@ a:hover {
 }
 
 h3:hover {
-	cursor: pointer
+	cursor: pointer;
+	color: rgb(90, 90, 90) !important;
 }
