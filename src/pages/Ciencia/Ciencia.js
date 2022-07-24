@@ -4,6 +4,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import Tabs from '../../components/Tabs/Tabs';
 import HeroNews from '../../components/HeroNews/HeroNews';
 import styles from './Ciencia.module.css';
+import ListSection from '../../components/ListSection/ListSection';
 
 const Ciencia = () => {
 	const [scienceArticles, setScienceArticles] = useState({});
@@ -29,7 +30,6 @@ const Ciencia = () => {
 		try {
 			let { data } = await axios.get(`${url}`);
 			setScienceArticles(data);
-			console.log('ciencia', social);
 			return;
 		} catch (e) {
 			console.log(e);
@@ -48,6 +48,16 @@ const Ciencia = () => {
 				<div className={styles.sciencePage}>
 					<PageHeader title='Science' navArray={navArray} />
 					<HeroNews article={scienceArticles.results[2]} />
+					{/* lista de environment */}
+					<ListSection
+						articles={scienceArticles.results.slice(2, 7)}
+						title='Climate and Environment'
+					/>
+					{/* outra lista */}
+					<ListSection
+						articles={scienceArticles.results.slice(2, 7)}
+						title='Climate and Environment'
+					/>
 					<Tabs articles={scienceArticles} social={social} />
 				</div>
 			) : (

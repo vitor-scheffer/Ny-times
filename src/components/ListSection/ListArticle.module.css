@@ -1,0 +1,26 @@
+.listArticleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 8px;
+	gap: 16px;
+	border-left: 1px solid #dfdfdf;
+}
+
+.listArticleContainer:first-child {
+	border-left: none;
+}
+
+.listArticleContainer img {
+	width: 205px;
+}
+
+.listArticleContainer a {
+	max-width: 205px;
+}
+
+.listArticleContainer a h2 {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: justify;
+}

@@ -1,0 +1,26 @@
+.listSectionContainer {
+	margin: 40px 0;
+	border-top: 1px solid black;
+	padding: 4px 0;
+}
+
+.listSectionContainer div:first-child {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.listSectionContainer div:first-child small {
+	font-size: 10px;
+	color: #666;
+}
+
+.listSectionContainer a h2 {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.listContainer {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
