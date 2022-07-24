@@ -19,7 +19,7 @@
   color:  #666;
 }
 
-.containerFlex p {
+.containerFlex div:first-child p {
   color: #5a5a5a;
   padding-top: 10px;
 }

@@ -11,15 +11,6 @@ const FirstNews = ({mainNews}) => {
     {mainExists ? (
       <>
       <section className={styles.flexContainer}>
-      {/* <nav className={styles.navNews}>
-        <a href="#"><strong>Russia-Ukraine War</strong></a>
-        <ul className={styles.listaNews}>
-          <li><a href="#">Maps: Russia's Invasion</a></li>
-          <li><a href="#">Photos</a></li>
-          <li><a href="#">Ukraine’s War Dead</a></li>
-          <li><a href="#">Attacks on Civilians</a></li>
-        </ul>
-      </nav> */}
       <div className={styles.topNews}>
         <div>
           <News mainNews={mainNews[0]} descricao={mainNews[0].abstract} isBorder/>

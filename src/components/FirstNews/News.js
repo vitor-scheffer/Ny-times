@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import styles from './FirstNews.module.css'
 
-const News = ({mainNews, descricao, isBorder, isBottom, isBorderRight}) => {
+const News = ({mainNews, descricao, isBorder}) => {
   const mainExists = Object.keys(mainNews).length > 0;
 
   return (
@@ -9,9 +9,7 @@ const News = ({mainNews, descricao, isBorder, isBottom, isBorderRight}) => {
     {mainExists ? (
       <>
       <div className={styles.text} style={{
-      borderBottom: isBorder ? '1px solid #dfdfdf' : '',
-      borderRight: isBorderRight ? '1px solid #dfdfdf' : '',
-      fontSize: isBottom ? '14px' : ''}} >
+      borderBottom: isBorder ? '1px solid #dfdfdf' : ''}} >
       <Link to="/detalhenoticia">
         <h3>{mainNews.title}</h3>
         <p>{descricao ? descricao : ''}</p>

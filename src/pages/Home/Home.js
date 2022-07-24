@@ -8,12 +8,14 @@ import FirstNews from '../../components/FirstNews/FirstNews'
 import Sports from '../../components/Sports/SportsNews'
 import Missed from '../../components/Missed/Missed';
 import TopAside from '../../components/TopAside/TopAside'
+import MiddleMain from '../../components/MiddleMain/MiddleMain'
 
 const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => {
 	const [articles, setArticles] = useState({});
 	const [opinion, setOpinion] = useState([]);
 	const [smallAside, setSmallAside] = useState([]);
 	const [mainNews, setMainNews] = useState([]);
+	const [middleNews, setMiddleNews] = useState([]);
 	const [sports, setSports] = useState([]);
 	const [missed, setMissed] = useState([]);
 	const [mainAside, setMainAside] = useState([]);
@@ -24,14 +26,13 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 			setMainNews(api.results.slice(0,5))
 			setSports(api.results[5])
 			setArticles(api.results[6]);
-			setOpinion(api.results.filter((result) => result.section === 'opinion'));
+			setMiddleNews(api.results.slice(7,11))
 			setMainAside(api.results.slice(12,13));
 			setSmallAside(api.results.slice(13, 15));
+			setOpinion(api.results.filter((result) => result.section === 'opinion'));
 			setMissed(api.results.slice(28));
 		}
 	}, [api]);
-
-	console.log(opinion)
 
 	return (
 		<div>
@@ -42,6 +43,8 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 					<FirstNews mainNews={mainNews} />
 					<Sports sports={sports}/>
 					<BigImageText article={articles} />
+					<MiddleMain middleNews={middleNews.slice(0,2)}/>
+					<MiddleMain middleNews={middleNews.slice(2,4)}/>
 				</div>
 				{/* linha entre main e aside */}
 				<div className={styles.lineLg}></div>
@@ -76,7 +79,7 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 					<Missed isBorder missed={missed.slice(4,5)}/>
 					<Missed isBorder missed={missed.slice(5,6)}/>
 					<Missed isBorder missed={missed.slice(6,7)}/>
-					<Missed isBorder missed={missed.slice(7,8)}/>
+					<Missed missed={missed.slice(7,8)}/>
 					<Missed missed={missed.slice(8,9)}/>
 					</div>
 					
