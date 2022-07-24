@@ -10,7 +10,7 @@ const News = ({mainNews, descricao, isBorder}) => {
       <>
       <div className={styles.text} style={{
       borderBottom: isBorder ? '1px solid #dfdfdf' : ''}} >
-      <Link to="/detalhenoticia">
+      <Link to={`/detalhenoticia/${mainNews.title}/${mainNews.abstract}`}>
         <h3>{mainNews.title}</h3>
         <p>{descricao ? descricao : ''}</p>
       </Link>

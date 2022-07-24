@@ -12,12 +12,12 @@ const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
 			setTitle(smallAside[0].title);
 		}
 	}, [smallAside]);
-
+	
 	return (
 		<>
 			{smallExists ? (
 				<div className={styles.smNews}>
-					<Link to='/detalhenoticia'>
+					<Link to={`/detalhenoticia/${smallAside[0].title}/${smallAside[0].abstract}`}>
 						<img src={smallAside[0].multimedia[2].url} alt='' />
 						<h3>{smallAside[0].title}</h3>
 					</Link>

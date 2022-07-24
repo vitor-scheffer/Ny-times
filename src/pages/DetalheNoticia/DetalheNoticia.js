@@ -3,8 +3,18 @@ import gift from '../../images/gift.svg'
 import share from '../../images/share-1.svg'
 import save from '../../images/save.svg'
 import HeaderTop from '../../pages/Header/HeaderTop/HeaderTop';
+import { useParams } from 'react-router-dom'
 
-const DetalheNoticia = ({ title, img, descricao }) => {
+
+
+
+const DetalheNoticia = ({Api}) => {
+	
+		let {title} = useParams();
+		let {descricao} = useParams();
+		let img;
+		Api.results.find(e => {if(e.title === title) {img = e.multimedia[0].url}})
+
 	return (
 		<div>
 			<HeaderTop type='page' title='' className={styles.header}/>

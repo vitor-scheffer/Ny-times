@@ -66,9 +66,9 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 					<div className={styles.opinion}>
 						{opinion.length > 0 && <Opinion isBorder article={opinion.slice(4, 5)} />}
 						{opinion.length > 0 && <Opinion isImg isBorder article={opinion.slice(5, 6)} />}
-						{opinion.length > 0 && <Opinion isAuthor isBorder article={opinion.slice(6, 7)} />}
-						{opinion.length > 0 && <Opinion isAuthor isBorder article={opinion.slice(7, 8)} />}
-						{opinion.length > 0 && <Opinion article={opinion.slice(8, 9)} />}
+						{opinion.length > 0 && <Opinion isAuthor article={opinion.slice(6, 7)} />}
+						{/* {opinion.length > 0 && <Opinion isAuthor isBorder article={opinion.slice(7, 8)} />}
+						{opinion.length > 0 && <Opinion article={opinion.slice(8, 9)} />} */}
 					</div>
 					<div className={styles.missed}>
 						<span>In Case You Missed It</span>
@@ -77,8 +77,8 @@ const Home = ({ api, setDescricao, setImg, setTitle, img, title, descricao}) => 
 					<Missed isBorder missed={missed.slice(2,3)}/>
 					<Missed isBorder missed={missed.slice(3,4)}/>
 					<Missed isBorder missed={missed.slice(4,5)}/>
-					<Missed isBorder missed={missed.slice(5,6)}/>
-					<Missed isBorder missed={missed.slice(6,7)}/>
+					<Missed missed={missed.slice(5,6)}/>
+					<Missed missed={missed.slice(6,7)}/>
 					<Missed missed={missed.slice(7,8)}/>
 					<Missed missed={missed.slice(8,9)}/>
 					</div>

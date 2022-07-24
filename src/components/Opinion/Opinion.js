@@ -27,8 +27,11 @@ const authors = [
 	}
 ]
 
+const kickerExists = article[0].kicker !== ''
 let img;
-authors.forEach(e => {if (e.name === article[0].kicker.toUpperCase()) {img = e.url}})
+
+{kickerExists ? (authors.forEach(e => e.name === article[0].kicker.toUpperCase() ? img = e.url : img = '')) : (<></>)}
+
 
 	return (
 		<>

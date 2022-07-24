@@ -2,7 +2,6 @@ import styles from './TopAside.module.css';
 
 const TopAside = ({mainAside}) => {
     const topExists = Object.keys(mainAside).length > 0;
-    console.log(mainAside[0])
 
     return (
       <>
