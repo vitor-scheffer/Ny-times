@@ -142,4 +142,39 @@ footer ul li a:hover {
     margin-top: 0px;
 }
 
+@media (max-width: 1200px) {
+  Footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer ul li {
+    display: none;
+  }
+
+  .mainFooter {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mainFooter ul {
+    border-bottom: 1px solid rgb(226, 226, 226);
+    margin-bottom: 10px;
+  }
+
+  .asideFooter {
+    display: none !important;
+  }
+
+  .container {
+    border: none;
+  }
+
+  footer .bottomNav li {
+    display: flex !important;
+  }
+
+}
+
+
 
