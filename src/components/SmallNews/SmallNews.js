@@ -8,7 +8,7 @@ const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
 	useEffect(() => {
 		if (setDescricao && setImg && setTitle && smallExists) {
 			setDescricao(smallAside[0].abstract);
-			setImg(smallAside[0].url);
+			setImg(smallAside[0].multimedia[0].url);
 			setTitle(smallAside[0].title);
 		}
 	}, [smallAside]);
