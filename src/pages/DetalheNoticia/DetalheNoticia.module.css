@@ -9,6 +9,11 @@
   max-height: 800px;
 }
 
+.flexContainer h3:hover {
+  color: black !important;
+  cursor: default;
+}
+
 .flexContainer h3,
 .flexContainer p {
   display: flex;

@@ -7,6 +7,8 @@ import img4 from '../../images/authors/author4.webp';
 import img5 from '../../images/authors/img5.webp';
 import img6 from '../../images/authors/img6.webp';
 import img7 from '../../images/authors/img7.webp';
+import img8 from '../../images/authors/img8.webp';
+
 
 const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 	const articleExists = article && article.length > 0;
@@ -42,6 +44,10 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 			name: 'MARA GAY',
 			url: img7,
 		},
+		{
+			name: 'CHARLES M. BLOW',
+			url : img8
+		}
 	];
 
 	const kickerExists = article[0].kicker !== '';

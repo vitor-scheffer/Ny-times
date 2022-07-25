@@ -1,5 +1,6 @@
 import moment from 'moment';
 import styles from './ArticleDateTag.module.css';
+import { Link } from 'react-router-dom'
 
 const ListArticleDateTag = ({ article, inverted }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
@@ -14,6 +15,7 @@ const ListArticleDateTag = ({ article, inverted }) => {
 	return (
 		<>
 			{articlesExists ? (
+				<Link to={`/detalhenoticia/${article.title}/${article.abstract}`}>
 				<div className={styles.ArticleDateTagContainer}>
 					<div>
 						<div>
@@ -39,6 +41,7 @@ const ListArticleDateTag = ({ article, inverted }) => {
 						</div>
 					</div>
 				</div>
+				</Link>
 			) : (
 				<></>
 			)}

@@ -1,5 +1,6 @@
 import moment from 'moment';
 import styles from './HeroNews.module.css';
+import { Link } from 'react-router-dom'
 
 const HeroNews = ({ article, type, direction }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
@@ -31,6 +32,7 @@ const HeroNews = ({ article, type, direction }) => {
 	return (
 		<>
 			{articlesExists ? (
+				<Link to={`/detalhenoticia/${article.title}/${article.abstract}`}>
 				<div className={containerClass}>
 					<div className={styles.heroImageDiv}>
 						<img
@@ -51,6 +53,7 @@ const HeroNews = ({ article, type, direction }) => {
 						</div>
 					</div>
 				</div>
+				</Link>
 			) : (
 				<></>
 			)}
