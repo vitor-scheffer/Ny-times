@@ -52,7 +52,7 @@ const Ciencia = () => {
 						<HeroNews article={scienceArticles.results[2]} />
 						<div>
 							{scienceArticles.results.slice(-3).map((article) => (
-								<ListArticleDateTag article={article} />
+								<ListArticleDateTag article={article} key={article.uri} />
 							))}
 						</div>
 					</section>
