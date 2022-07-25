@@ -4,6 +4,10 @@ import { useEffect } from 'react';
 
 const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
 	const smallExists = Object.keys(smallAside).length > 0;
+	let urlSearch;
+	if (smallExists) {
+		urlSearch = smallAside[0].url.slice(22, -5);
+	}
 
 	useEffect(() => {
 		if (setDescricao && setImg && setTitle && smallExists) {
@@ -12,12 +16,12 @@ const SmallNews = ({ smallAside, setDescricao, setImg, setTitle }) => {
 			setTitle(smallAside[0].title);
 		}
 	}, [smallAside]);
-	
+
 	return (
 		<>
 			{smallExists ? (
 				<div className={styles.smNews}>
-					<Link to={`/detalhenoticia/${smallAside[0].title}/${smallAside[0].abstract}`}>
+					<Link to={`/detalhenoticia/${urlSearch.replaceAll('/', '---')}/`}>
 						<img src={smallAside[0].multimedia[2].url} alt='' />
 						<h3>{smallAside[0].title}</h3>
 					</Link>

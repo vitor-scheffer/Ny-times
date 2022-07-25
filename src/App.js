@@ -12,16 +12,15 @@ import Header from './pages/Header/Header';
 import Footer from './pages/Footer/Footer';
 import DetalheNoticia from './pages/DetalheNoticia/DetalheNoticia';
 
-
 function App() {
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';
 
 	const [Api, setApi] = useState({});
 	// const [articles, setArticles] = useState({});
-	const [title, setTitle] = useState()
-	const [descricao, setDescricao] = useState()
-	const [img, setImg] = useState()
+	const [title, setTitle] = useState();
+	const [descricao, setDescricao] = useState();
+	const [img, setImg] = useState();
 
 	const Setup = async () => {
 		try {
@@ -41,8 +40,11 @@ function App() {
 		<>
 			<BrowserRouter>
 				<Routes>
-					<Route exact path='/' element={<Home api={Api}/>}></Route>
-					<Route path='/detalhenoticia/:title/:descricao/' element={<DetalheNoticia Api={Api}/>}></Route>
+					<Route exact path='/' element={<Home api={Api} />}></Route>
+					<Route
+						path='/detalhenoticia/:urlSearch'
+						element={<DetalheNoticia />}
+					></Route>
 					<Route path='/ciencia' element={<Ciencia />}></Route>
 					<Route path='/tecnologia' element={<Tecnologia />}></Route>
 					<Route path='/saude' element={<Saude />}></Route>

@@ -9,9 +9,12 @@ import img6 from '../../images/authors/img6.webp';
 import img7 from '../../images/authors/img7.webp';
 import img8 from '../../images/authors/img8.webp';
 
-
 const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 	const articleExists = article && article.length > 0;
+	let urlSearch;
+	if (articleExists) {
+		urlSearch = article[0].url.slice(22, -5);
+	}
 
 	console.log(img1);
 
@@ -46,8 +49,8 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 		},
 		{
 			name: 'CHARLES M. BLOW',
-			url : img8
-		}
+			url: img8,
+		},
 	];
 
 	const kickerExists = article[0].kicker !== '';
@@ -66,7 +69,7 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 	return (
 		<>
 			{articleExists ? (
-				<Link to={`/detalhenoticia/${article[0].title}/${article[0].abstract}`}>
+				<Link to={`/detalhenoticia/${urlSearch.replaceAll('/', '---')}/`}>
 					<div
 						className={styles.opinion}
 						style={{ borderBottom: isBorder ? '1px solid #dfdfdf' : '' }}

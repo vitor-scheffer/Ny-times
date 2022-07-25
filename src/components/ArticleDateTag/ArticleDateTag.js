@@ -1,6 +1,6 @@
 import moment from 'moment';
 import styles from './ArticleDateTag.module.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const ListArticleDateTag = ({ article, inverted }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
@@ -11,36 +11,39 @@ const ListArticleDateTag = ({ article, inverted }) => {
 		byline = article.byline.toUpperCase();
 		byline = byline.replace('Y', 'y');
 	}
+	const urlSearch = article.url.slice(22, -5);
 
 	return (
 		<>
 			{articlesExists ? (
-				<Link to={`/detalhenoticia/${article.title}/${article.abstract}`}>
-				<div className={styles.ArticleDateTagContainer}>
-					<div>
+				<Link to={`/detalhenoticia/${urlSearch.replaceAll('/', '---')}/`}>
+					<div className={styles.ArticleDateTagContainer}>
 						<div>
-							<p>{article.section.toUpperCase()}</p>
-							<a href='#'>
-								<h2>{article.title}</h2>
-							</a>
-						</div>
-
-						{!inverted && <img src={article.multimedia[2].url} alt='Article' />}
-					</div>
-					<div>
-						{inverted && (
-							<div className={styles.inverted}>
-								<img src={article.multimedia[2].url} alt='Article' />
-								<p>{article.abstract}</p>
+							<div>
+								<p>{article.section.toUpperCase()}</p>
+								<a href='#'>
+									<h2>{article.title}</h2>
+								</a>
 							</div>
-						)}
-						{!inverted && <p>{article.abstract}</p>}
+
+							{!inverted && (
+								<img src={article.multimedia[2].url} alt='Article' />
+							)}
+						</div>
 						<div>
-							<small>{relativeDate} &bull;</small>
-							<small>{byline}</small>
+							{inverted && (
+								<div className={styles.inverted}>
+									<img src={article.multimedia[2].url} alt='Article' />
+									<p>{article.abstract}</p>
+								</div>
+							)}
+							{!inverted && <p>{article.abstract}</p>}
+							<div>
+								<small>{relativeDate} &bull;</small>
+								<small>{byline}</small>
+							</div>
 						</div>
 					</div>
-				</div>
 				</Link>
 			) : (
 				<></>

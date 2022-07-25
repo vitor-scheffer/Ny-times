@@ -7,11 +7,12 @@ const LatestNews = ({ article }) => {
 	const data = moment(article.update_date).format('MMMM, D YYYY');
 	let byline = article.byline.toUpperCase();
 	byline = byline.replace('Y', 'y');
+	const urlSearch = article.url.slice(22, -5);
 
 	return (
 		<>
 			{articleExists ? (
-				<Link to={`/detalhenoticia/${article.title}/${article.abstract}`}>
+				<Link to={`/detalhenoticia/${urlSearch.replaceAll('/', '---')}/`}>
 					<div className={styles.latestNews}>
 						<div>{data}</div>
 						<div>
