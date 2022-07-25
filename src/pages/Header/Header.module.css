@@ -43,3 +43,9 @@ header a {
 header a:hover {
 	background-color: #f7f7f7;
 }
+
+@media (max-width: 1200px) {
+	header {
+		padding: 0 15px;
+	}
+}

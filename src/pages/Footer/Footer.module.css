@@ -146,6 +146,7 @@ footer ul li a:hover {
   Footer {
     display: flex;
     flex-direction: column;
+    padding: 0 15px;
   }
 
   footer ul li {
@@ -155,6 +156,7 @@ footer ul li a:hover {
   .mainFooter {
     flex-direction: column;
     width: 100%;
+    border-right: none;
   }
 
   .mainFooter ul {
