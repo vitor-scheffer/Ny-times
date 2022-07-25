@@ -54,10 +54,6 @@ const DetalheNoticia = ({ Api }) => {
 							<span>{article.byline.original.substring(3)}</span>
 						</div>
 
-						<img
-							src={`https://static01.nyt.com/${article.multimedia[0].url}`}
-							alt=''
-						/>
 						<div className={styles.interactions}>
 							<button>
 								<img src={gift} alt='' />
@@ -70,6 +66,10 @@ const DetalheNoticia = ({ Api }) => {
 								<img src={save} alt='' />
 							</button>
 						</div>
+						<img
+							src={`https://static01.nyt.com/${article.multimedia[0].url}`}
+							alt=''
+						/>
 					</div>
 				</div>
 			) : (

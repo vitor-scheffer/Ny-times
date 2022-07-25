@@ -75,7 +75,7 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 						style={{ borderBottom: isBorder ? '1px solid #dfdfdf' : '' }}
 					>
 						<div>
-							<p>{article[0].kicker.toUpperCase()}</p>
+							<p>{article[0].byline.toUpperCase().substring(3)}</p>
 							<h3>{article[0].title}</h3>
 						</div>
 						{isImg ? (
