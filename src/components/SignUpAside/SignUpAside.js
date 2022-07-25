@@ -5,7 +5,6 @@ import styles from './SignUpAside.module.css';
 
 const SignUpAside = ({ social }) => {
 	const socialExists = social && Object.keys(social).length > 0;
-	console.log(social);
 
 	return (
 		<>

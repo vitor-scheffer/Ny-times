@@ -45,26 +45,29 @@ const DetalheNoticia = ({ Api }) => {
 						<h3>{article.headline.main}</h3>
 
 						<p>{article.abstract}</p>
-						<div className={styles.authInfo}>
-							<span>
-								{articleExists && (
-									<strong>{moment(article.published_date).format('LL')}</strong>
-								)}
-							</span>
-							<span>{article.byline.original.substring(3)}</span>
-						</div>
-
-						<div className={styles.interactions}>
-							<button>
-								<img src={gift} alt='' />
-								Give this article
-							</button>
-							<button>
-								<img src={share} alt='' />
-							</button>
-							<button>
-								<img src={save} alt='' />
-							</button>
+						<div className={styles.bottomContainer}>
+							<div className={styles.authInfo}>
+								<span>
+									{articleExists && (
+										<strong>
+											{moment(article.published_date).format('LL')}
+										</strong>
+									)}
+								</span>
+								<span>{article.byline.original.substring(3)}</span>
+							</div>
+							<div className={styles.interactions}>
+								<button>
+									<img src={gift} alt='' />
+									Give this article
+								</button>
+								<button>
+									<img src={share} alt='' />
+								</button>
+								<button>
+									<img src={save} alt='' />
+								</button>
+							</div>
 						</div>
 						<img
 							src={`https://static01.nyt.com/${article.multimedia[0].url}`}
