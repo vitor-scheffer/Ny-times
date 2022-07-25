@@ -4,7 +4,6 @@ import styles from './LatestSection.module.css';
 
 const LatestSection = ({ articles, social }) => {
 	const articlesExists = Object.keys(articles).length > 0;
-	console.log('Social', social);
 
 	return (
 		<section className={styles.latestSection}>
@@ -19,14 +18,7 @@ const LatestSection = ({ articles, social }) => {
 					<></>
 				)}
 			</div>
-			{articlesExists && social ? (
-				<SignUpAside
-					article={articles.results[0]}
-					socialMedia='NYTimesScience'
-				/>
-			) : (
-				<></>
-			)}
+			{articlesExists && social ? <SignUpAside social={social} /> : <></>}
 		</section>
 	);
 };
