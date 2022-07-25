@@ -1,3 +1,20 @@
 .sciencePage {
 	margin-bottom: 100px;
 }
+
+.topSection {
+	display: flex;
+	gap: 30px;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.sciencePage > section:nth-child(3),
+.sciencePage > section:nth-child(4) {
+	margin-bottom: 260px;
+}
+
+.topSection > div:nth-child(2) {
+	padding-left: 26px;
+	margin-bottom: 20px;
+	border-left: 1px solid #dfdfdf;
+}

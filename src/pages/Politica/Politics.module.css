@@ -1,0 +1,21 @@
+.politicsPage > section {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-column-gap: 20px;
+	margin-bottom: 160px;
+}
+
+.politicsPage > section > section:last-of-type {
+	border-left: 1px solid #dfdfdf;
+	padding-left: 20px;
+}
+
+.politicsPage > section > section > div {
+	border-bottom: 1px solid #dfdfdf;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.politicsPage > section > section > div:last-child {
+	border: none;
+}

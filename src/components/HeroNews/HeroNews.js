@@ -1,7 +1,7 @@
 import moment from 'moment';
 import styles from './HeroNews.module.css';
 
-const HeroNews = ({ article }) => {
+const HeroNews = ({ article, type, direction }) => {
 	const articlesExists = article && Object.keys(article).length > 0;
 	let relativeDate;
 	let byline;
@@ -11,22 +11,40 @@ const HeroNews = ({ article }) => {
 		byline = byline.replace('Y', 'y');
 	}
 
+	let imgSize =
+		type === 'small' ? '305px' : type === 'medium' ? '606px' : '810px';
+	if (direction === 'row') {
+		const size = article.multimedia[0].width * 0.25;
+		imgSize = `${size}px`;
+	}
+
+	const textClass =
+		imgSize !== '810px' ? `${styles.heroNoPadding}` : `${styles.heroPadding}`;
+
+	const containerClass =
+		direction === 'row' ? `${styles.rowContainer}` : `${styles.heroNews}`;
+
 	return (
 		<>
 			{articlesExists ? (
-				<div className={styles.heroNews}>
-					<div>
-						<img src={article.multimedia[0].url} alt='Article' />
+				<div className={containerClass}>
+					<div className={styles.heroImageDiv}>
+						<img
+							style={{ width: `${imgSize}` }}
+							src={article.multimedia[0].url}
+							alt='Article'
+						/>
 						<small>{article.multimedia[0].copyright.toUpperCase()}</small>
 					</div>
-
-					<a href='#'>
-						<h2>{article.title}</h2>
-					</a>
-					<p>{article.abstract}</p>
-					<div>
-						<small>{relativeDate} &bull;</small>
-						<small>{byline}</small>
+					<div className={styles.heroTextDiv}>
+						<a href='#' className={textClass}>
+							<h2 className={textClass}>{article.title}</h2>
+						</a>
+						<p className={textClass}>{article.abstract}</p>
+						<div className={textClass}>
+							<small>{relativeDate} &bull;</small>
+							<small>{byline}</small>
+						</div>
 					</div>
 				</div>
 			) : (
