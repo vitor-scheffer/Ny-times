@@ -40,3 +40,16 @@
 	flex-direction: column;
 	align-items: flex-end;
 }
+
+@media (max-width: 768px) {
+	.container > div:first-child {
+		display: none;
+	}
+
+	.container img {
+		position: absolute;
+		width: 200px;
+		top: 10px;
+		left: 130px;
+	}
+}
