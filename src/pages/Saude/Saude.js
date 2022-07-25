@@ -52,7 +52,7 @@ const Saude = () => {
 							/>
 							<div className={styles.listHero}>
 								<HeroNews article={healthArticles.results[3]} type='small2' />
-								<HeroNews article={healthArticles.results[5]} type='small2' />
+								<HeroNews article={healthArticles.results[9]} type='small2' />
 								<HeroNews article={healthArticles.results[7]} type='small2' />
 							</div>
 						</section>
