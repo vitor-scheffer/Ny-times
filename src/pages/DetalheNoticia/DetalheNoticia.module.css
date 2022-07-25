@@ -107,4 +107,8 @@
 		max-width: 100%;
 		max-height: 250px;
 	}
+
+	.bottomContainer {
+		flex-direction: column;
+	}
 }
