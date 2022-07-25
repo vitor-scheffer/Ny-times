@@ -76,3 +76,13 @@
 	width: 1px;
 }
 
+@media (max-width: 768px) {
+	img {
+		max-width: 100%;
+	}
+
+  .topNews {
+    flex-direction: column;
+  }
+}
+

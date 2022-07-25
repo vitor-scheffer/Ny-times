@@ -8,3 +8,14 @@
 .flexContainer img {
   width: 520px;
 }
+
+@media (max-width: 768px) {
+	.flexContainer {
+    flex-direction: column;
+		max-width: 100vw;
+	}
+
+  .flexContainer img {
+    max-width: 100%;
+  }
+}

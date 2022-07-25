@@ -21,3 +21,9 @@
 	color: #666;
 	margin-right: 0;
 }
+
+@media (max-width: 768px) {
+	.weather {
+		display: none;
+	}
+}

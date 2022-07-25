@@ -173,7 +173,16 @@ footer ul li a:hover {
   }
 
   footer .bottomNav li {
-    display: flex !important;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 10px;
+    
+    flex-wrap: wrap;
+  }
+
+  .bottomNav {
+    display: block;
+    margin: 0 auto;
   }
 
 }

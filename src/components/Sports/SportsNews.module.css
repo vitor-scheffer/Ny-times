@@ -23,3 +23,10 @@
   color: #5a5a5a;
   padding-top: 10px;
 }
+
+@media (max-width: 768px) {
+	.containerFlex {
+		flex-direction: column;
+    max-width: 100%;
+	}
+}
