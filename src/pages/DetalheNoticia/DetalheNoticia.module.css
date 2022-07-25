@@ -40,7 +40,7 @@
 	display: flex;
 	gap: 10px;
 	max-width: 600px;
-	margin-left: 300px;
+	margin-left: 180px;
 	padding-bottom: 24px;
 }
 
@@ -72,7 +72,7 @@
 	align-items: start;
 	font-size: 12px;
 	max-width: 600px;
-	padding-left: 300px;
+	/* padding-left: 300px; */
 	padding-bottom: 16px;
 }
 
@@ -86,6 +86,7 @@
 
 .bottomContainer {
 	display: flex;
+	justify-content: center;
 }
 
 @media (max-width: 768px) {
