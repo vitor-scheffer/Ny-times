@@ -13,9 +13,13 @@ const HeroNews = ({ article, type, direction }) => {
 
 	let imgSize =
 		type === 'small' ? '305px' : type === 'medium' ? '606px' : '810px';
+	if (type === 'small2') {
+		imgSize = '374px';
+	}
 	if (direction === 'row') {
-		const size = article.multimedia[0].width * 0.25;
-		imgSize = `${size}px`;
+		const mediumSize = article.multimedia[0].width * 0.25;
+		const largeSize = article.multimedia[0].width * 0.3;
+		imgSize = type === 'large' ? `${largeSize}px` : `${mediumSize}px`;
 	}
 
 	const textClass =

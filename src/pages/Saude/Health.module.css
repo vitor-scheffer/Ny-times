@@ -1,0 +1,51 @@
+.healthPage > section > section > div {
+	display: flex;
+}
+
+.listHero {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #dfdfdf;
+	display: flex;
+	justify-content: space-between;
+}
+
+.healthPage
+	> section
+	> section:nth-child(1)
+	> div:nth-child(2)
+	> div
+	> div:nth-child(2) {
+	padding-right: 40px;
+	max-width: 370px;
+}
+
+.healthPage > section > section:nth-child(1) > div:nth-child(2) > div {
+	border-right: 1px solid #dfdfdf;
+}
+
+.healthPage
+	> section
+	> section:nth-child(1)
+	> div:nth-child(2)
+	> div:last-child {
+	border: none;
+}
+
+.healthPage
+	> section
+	> section:nth-child(1)
+	> div:nth-child(2)
+	> div
+	> div:nth-child(2) {
+	padding-left: 14px;
+}
+
+.healthPage > section > section:nth-of-type(2) {
+	border-top: 1px solid #dfdfdf;
+	margin-bottom: 160px;
+}
+
+.healthPage > section > section:nth-of-type(3) {
+	margin-bottom: 160px;
+}
