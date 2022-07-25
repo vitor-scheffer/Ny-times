@@ -3,7 +3,10 @@
 	grid-template-columns: 830px 1px 336.91px;
 	gap: calc(1rem + 1px);
 	padding: 20px 0;
+}
 
+.home a {
+	text-decoration: none;
 }
 
 .opinion {
@@ -35,7 +38,7 @@
 
 .missed span,
 .opinion span {
-	font-family: nyt-franklin,helvetica,arial,sans-serif;
+	font-family: nyt-franklin, helvetica, arial, sans-serif;
 	font-weight: bold;
 	font-size: 14px;
 	margin-bottom: 20px;
@@ -50,7 +53,7 @@
 
 	.smallDouble {
 		display: flex;
-		justify-content: space-evenly
+		justify-content: space-evenly;
 	}
 
 	.opinion {

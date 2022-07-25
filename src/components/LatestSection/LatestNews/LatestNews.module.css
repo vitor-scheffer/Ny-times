@@ -1,5 +1,6 @@
 .latestNews {
-	display: flex;
+	display: grid;
+	grid-template-columns: 90px 1fr 205px;
 	gap: 30px;
 	max-width: 840px;
 	padding: 28px 0;
