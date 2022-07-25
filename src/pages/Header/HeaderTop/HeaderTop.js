@@ -10,7 +10,6 @@ import styles from './HeaderTop.module.css';
 // <HeaderTop headerType="page" title="Science" />
 
 const HeaderTop = (props) => {
-	console.log(props.headerType);
 	let imgClasse =
 		props.headerType === 'main' ? `${styles.hide}` : `${styles.show}`;
 

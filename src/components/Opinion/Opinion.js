@@ -11,8 +11,6 @@ import img7 from '../../images/authors/img7.webp'
 const Opinion = ({ article, isImg, isAuthor, isBorder}) => {
 	const articleExists = article && article.length > 0;
 
-	console.log(img1)
-
 const authors = [
 	{
 		name: 'MICHELLE GOLDBERG',
