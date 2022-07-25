@@ -84,6 +84,10 @@
 	border-bottom: 1px solid rgb(223, 223, 223);
 }
 
+.bottomContainer {
+	display: flex;
+}
+
 @media (max-width: 768px) {
 	.authInfo {
 		padding-left: 0px;
