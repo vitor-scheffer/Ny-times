@@ -9,7 +9,12 @@ import ListArticleDateTag from '../../components/ArticleDateTag/ArticleDateTag';
 
 const Ciencia = () => {
 	const [scienceArticles, setScienceArticles] = useState({});
-	const [social, setSocial] = useState(true);
+	const [social, setSocial] = useState({
+		title: 'science',
+		abstract:
+			'Every week, we’ll bring you stories that capture the wonders of the human body, nature and the cosmos.',
+		handle: 'NYTimesScience',
+	});
 
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/science.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';

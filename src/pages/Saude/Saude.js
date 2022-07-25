@@ -77,7 +77,7 @@ const Saude = () => {
 						</section>
 					</section>
 
-					<Tabs articles={healthArticles} social={social} />
+					<Tabs articles={healthArticles} />
 				</div>
 			) : (
 				<></>

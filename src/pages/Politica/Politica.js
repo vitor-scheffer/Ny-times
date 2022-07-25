@@ -8,7 +8,12 @@ import ListArticleDateTag from '../../components/ArticleDateTag/ArticleDateTag';
 
 const Politica = () => {
 	const [politicsArticles, setPoliticsArticles] = useState({});
-	const [social, setSocial] = useState(true);
+	const [social, setSocial] = useState({
+		title: 'The On Politics Newsletter',
+		abstract:
+			'A Times reader’s guide to the political news in Washington and across the nation.',
+		handle: 'nytpolitics',
+	});
 
 	const url =
 		'https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=7AXlTACqQRpVzaH4Af1YBCgfwBb8cT77';
