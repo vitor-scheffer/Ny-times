@@ -1,6 +1,6 @@
 Projeto clone do The New York Times, atividade final do primeiro módulo de React, desenvolvido no Vem Ser DBC.
 
-O site pode ser acessado em: https://vercel.com/vitor-scheffer/ny-times
+O site pode ser acessado em: https://vercel.com/vitor-scheffer/ny-times <br>
 O site original The New York Times: https://www.nytimes.com/
 
 📲 Funcionalidades
