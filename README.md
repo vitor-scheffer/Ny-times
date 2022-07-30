@@ -1,6 +1,6 @@
 Projeto clone do The New York Times, atividade final do primeiro módulo de React, desenvolvido no Vem Ser DBC.
 
-<a href="https://vercel.com/vitor-scheffer/ny-times" target="_blank">
+<a href="https://ny-times-ruby.vercel.app/" target="_blank">
   <img src="https://user-images.githubusercontent.com/103120313/181872455-2fe112c2-b304-4523-99d0-4527202cae49.png"></img>
 </a>
 <br>
