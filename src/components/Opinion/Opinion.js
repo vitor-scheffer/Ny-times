@@ -16,8 +16,6 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 		urlSearch = article[0].url.slice(22, -5);
 	}
 
-	console.log(img1);
-
 	const authors = [
 		{
 			name: 'MICHELLE GOLDBERG',
@@ -53,11 +51,11 @@ const Opinion = ({ article, isImg, isAuthor, isBorder }) => {
 		},
 	];
 
-	const kickerExists = article[0].kicker !== '';
+	const kickerExists = articleExists && article[0].kicker !== '';
 	let img;
 
 	{
-		kickerExists ? (
+		kickerExists && articleExists ? (
 			authors.forEach((e) =>
 				e.name === article[0].kicker.toUpperCase() ? (img = e.url) : (img = img)
 			)
