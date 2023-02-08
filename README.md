@@ -8,7 +8,7 @@ O site pode ser acessado em: https://ny-times-ruby.vercel.app/ <br>
 O site original The New York Times: https://www.nytimes.com/
 <br>
 <br>
-📲 Funcionalidades
+# 📲 Funcionalidades
 
 <ul>
   <li>Site autualizado constantemente através da API do jornal The New York Times</li>
@@ -17,7 +17,7 @@ O site original The New York Times: https://www.nytimes.com/
   <li>Versão mobile customizada conforme site oficial</li>
 </ul>
 
-🛠 Tecnologias
+# 🛠 Tecnologias
 <ul>
   <li>React JS</li>
   <li>Moment</li>
