@@ -5,7 +5,7 @@ Projeto clone do The New York Times, atividade final do primeiro módulo de Reac
 </a>
 
 # Acesso 
-<br>
+
 O site pode ser acessado em: https://ny-times-ruby.vercel.app/ <br>
 O site original The New York Times: https://www.nytimes.com/
 <br>
@@ -21,6 +21,7 @@ O site original The New York Times: https://www.nytimes.com/
 </ul>
 
 # 🛠 Tecnologias
+
 <ul>
   <li>React JS</li>
   <li>Moment</li>
