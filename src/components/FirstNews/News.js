@@ -3,7 +3,7 @@ import styles from "./FirstNews.module.css";
 
 const News = ({ mainNews, descricao, isBorder }) => {
   const mainExists = mainNews && Object.keys(mainNews).length > 0;
-  const urlSearch = mainNews.url.slice(22, -5);
+  const urlSearch = mainNews?.url ? mainNews.url.slice(22, -5) : '';
 
   return (
     <>
